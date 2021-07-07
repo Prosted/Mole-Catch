@@ -1,9 +1,5 @@
 @import "reset.css";
 
-.visible{
-    display: block;
-}
-
 .hidden{
     display: none;
 }
