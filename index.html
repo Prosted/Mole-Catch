@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Mole Catch!</title>
+</head>
+<body>
+    <div class="game-start visible">
+        <span><img src="" alt=""></span>
+        <div>
+            <input type="text", placeholder="UserName", required>
+            <div class="load-button hidden"><img src="" alt=""></div>
+            <span>Other User</span>
+        </div>
+    </div>
+    <div class="game-end hidden">
+        <span><img src="" alt=""></span>
+        <div class="visible">
+            <div class="score-board">
+                <div>
+                    <span class="score-board__text">Max Score :</span>
+                    <span class="score-board__score">0</span>
+                </div>
+                <div>
+                    <span class="score-board__text">Your Score :</span>
+                    <span class="score-board__score">0</span>
+                </div>
+            </div>   
+        </div>
+        <div class="hidden">
+            <span>New Record!</span>
+            <span>0</span>
+        </div>
+        <div class="load-button"><img src="" alt=""></div>
+    </div>
+
+    <main class="game hidden">
+        <div class="score-board">
+            <div>
+                <span class="score-board__text">Max Score :</span>
+                <span class="score-board__score">0</span>
+            </div>
+            <div>
+                <span class="score-board__text">Your Score :</span>
+                <span class="score-board__score">0</span>
+            </div>
+        </div>
+        
+        <div class="game-board">
+            <nav class="monster-score">
+                <div>
+                    <span><img src="" alt=""></span>
+                    <span>:</span>
+                    <span>0</span>
+                </div>
+                <div>
+                    <span><img src="" alt=""></span>
+                    <span>:</span>
+                    <span>0</span>
+                </div>
+                <div>
+                    <span><img src="" alt=""></span>
+                    <span>:</span>
+                    <span>0</span>
+                </div>
+            </nav>
+            <table class="game-table">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer class="game-info">
+            <div>
+                <span class="game-info__text">Life :</span>
+                <span class="game-info__life">0</span>
+            </div>
+            <div>
+                <span class="game-info__text">Time :</span>
+                <span class="game-info__time">00:00</span>
+            </div>
+        </footer>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+</html>
