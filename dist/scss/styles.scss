@@ -1,0 +1,258 @@
+@import url('../css/reset.css');
+@import url('../css/fonts.css');
+@import "extends";
+
+body{
+    @extend %font-shared;
+    @extend %flex-shared;
+    width: 100%;
+    height: 100vh;
+}
+
+.startPage{
+    @extend %full-screen;
+    @extend %flex-shared;
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/24/19/15/video-game-1856991_960_720.png");
+    background-position: center;
+    background-size: cover;
+    .banner{
+        @extend %flex-shared;
+        width: 100%;
+        margin-bottom: 30px;
+        img{
+            width: 30%;
+            //모바일폰에서는 width가 70%로 변하게 media query 작성
+        }
+    }
+    .startPage__box{
+        @extend %flex-shared;
+        width: 100%;
+        .startPage__box__userName{
+            width: 100%;
+            text-align: center;
+            input{
+                @extend %font-shared;
+                font-size: 1.4rem;
+                text-align: center;
+                border: none;
+                outline: none;
+                width: 25%; 
+                border-bottom: 2px solid black;
+                padding-bottom: 10px;
+                &:focus{
+                    border-color: blue;
+                    &::placeholder{
+                        visibility: hidden;
+                    }
+                }
+                &::placeholder{
+                    opacity: 0.5;
+                }
+            }
+        }
+        .load-button{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            img{
+                @extend %button-click;
+                width: 20%;
+                background-color: white;
+            }
+        }
+        .startPage__box__logout{
+            @extend %button-click;
+            width: 10%;
+            padding: 7px 10px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0.5px 0.5px 0.5px 0.5px;
+            &:hover{
+                border-color: yellow;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.gamePage{
+    @extend %full-screen;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr 1fr;
+    place-items: center center;
+    .score-board{
+        @extend %flex-shared;
+        flex-direction: row;
+        width: 50%;
+        margin-top: 5%;
+        padding: 20px 0;
+        border: 3px solid teal;
+        border-radius: 5px;
+        background-color: beige;
+        margin-bottom: 20px;
+        div{
+            margin: 0 30px;
+        }
+        span{
+            margin: 0 2px;
+            font-size: 1.2rem;
+        }
+    }
+    .game-board{
+        @extend %full-screen;
+        @extend %flex-shared;
+        text-align: center;
+        display:  grid;
+        grid-template-columns:  repeat(2, 1fr);
+        grid-template-rows:  1fr 5fr;
+        place-items: center center;
+        row-gap: 10px;
+        .monster-score{
+            @extend %full-screen;
+            @extend %flex-shared;
+            flex-direction: row;
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 1fr;
+            div{
+                @extend %full-screen;
+                @extend %flex-shared;
+                flex-direction: row;
+                .countImage{
+                    width: 50%;
+                    height: 100%;
+                    background-image: url("https://cdn.pixabay.com/photo/2018/04/19/21/17/lion-3334357_960_720.jpg");
+                    background-position: center;
+                    background-size: cover;
+                }
+                &:nth-child(2){
+                    .countImage{   
+                        background-image: url("https://cdn.pixabay.com/photo/2018/01/10/23/53/rabbit-3075088_960_720.png");
+                    }
+                }
+                &:last-child{
+                    .countImage{
+                        background-image: url("https://cdn.pixabay.com/photo/2018/02/26/11/13/cat-3182830_960_720.png");
+                    }
+                }
+                span{
+                    &:nth-child(2){
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+        .itemStatus{
+            @extend %full-screen;
+            @extend %flex-shared;
+            flex-direction: row;
+            justify-content: start;
+            font-size: 1.3rem;
+            font-weight: 600;
+            .itemStatus__text{
+                margin-left: 20px;
+                margin-right: 10px;
+            }
+        }
+        .game-table{
+            width: 60%;
+            height: 100%;
+            grid-column : 1/-1;
+            grid-row:2/-1;
+            border-collapse: collapse;
+            text-align: center;
+            td{
+                border: 1px solid black;
+                width:33.3%;
+                height: 33.3%;
+                .game-table__spawnPoint{
+                    @extend %full-screen;
+                    text-align: center;
+                    margin:0 auto;  
+                    img{
+                        width: 25%;
+                        height: 25%;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    .game-info{
+        @extend %full-screen;
+        text-align: center;
+        .game-info__life{
+            @extend %flex-shared;
+            flex-direction: row;
+            margin: 10px 0;
+            .game-info__life__text{
+                width: 10%;
+            }
+        }
+        .game-info__time{
+            margin-bottom: 10px;
+            span{
+                margin: 0 2px;
+            }
+        }
+        img{
+            width:30%;
+        }
+    }
+
+}
+
+.endPage{
+    @extend %full-screen;
+    text-align: center;
+    background-image: url("https://cdn.pixabay.com/photo/2021/05/10/14/48/rain-6243559_960_720.jpg");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    .gameover{
+        margin-top:10%;
+        margin-bottom: 20px;
+    }
+    .score-board{
+        margin-bottom: 20px;
+        font-size: 1.3rem;
+        font-weight: 500;
+        .score-board__max,
+        .score-board__current{
+            margin: 0 10px;
+            @extend %flex-shared;
+            flex-direction: row;
+            span{
+                margin-right: 5px;
+            }
+        }
+    }
+    .newRecord{
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom:10px;
+    }
+    .load-button{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+        img{
+            @extend %button-click;
+            width: 20%;
+            background-color: white;
+        }
+    }
+}
+
+
+
+.hidden{
+    display: none;
+}

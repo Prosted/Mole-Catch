@@ -3,6 +3,7 @@ const startPage = document.querySelector(".startPage");
 const userNameForm = document.querySelector(".startPage__box__userName");
 const userNameInput = userNameForm.querySelector("input");
 const startButton = startPage.querySelector(".load-button");
+const startButtonImg = startButton.querySelector("img");
 const logoutButton = document.querySelector(".startPage__box__logout");
 const gamePage = document.querySelector(".gamePage");
 
@@ -32,7 +33,7 @@ function gameStartVisible(){
     userNameForm.classList.add(HIDDEN);
     startButton.classList.remove(HIDDEN);
     logoutButton.classList.remove(HIDDEN);
-    startButton.addEventListener("click", handleStartButton);
+    startButtonImg.addEventListener("click", handleStartButton);
     logoutButton.addEventListener("click", handleLogoutButton);
 }
 

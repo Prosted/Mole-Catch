@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/css/styles.css">
+    <link rel="stylesheet" href="dist/css/styles.min.css">
     <title>Mole Catch!</title>
 </head>
 <body>
     <div class="startPage">
-        <span class="banner">
-            <img src="images/title.gif" alt="">
-        </span>
+        <div class="banner">
+            <img src="images/title.gif" alt="Mole Catch">
+        </div>
         <div class="startPage__box">
             <form class="startPage__box__userName" action="">
-                <input type="text", placeholder="UserName", required>
+                <input type="text", placeholder="UserName", required, maxlength="10">
             </form>
-            <div class="load-button hidden"><img src="data:image/png;base64,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" alt=""></div>
-            <span class="startPage__box__logout hidden">Other User</span>
+            <div class="load-button hidden"><img src="images/start.png" alt="startButton"></div>
+            <div class="startPage__box__logout hidden">Logout</div>
         </div>
     </div>
     <div class="endPage hidden">
-        <span><img src="https://png.pngtree.com/png-clipart/20210311/original/pngtree-game-over-glitch-effect-transparent-png-image_6000092.jpg" alt=""></span>
+        <div class="gameover"><img src="images/gameover.png" alt="gameOver"></div>
         <div class="score-board">
-            <div>
+            <div class="score-board__max">
                 <span>Max Score :</span>
                 <div class="score-board__best">0</div>
             </div>
-            <div>
+            <div class="score-board__current">
                 <span>Your Score :</span>
                 <div class="score-board__player">0</div>
             </div>
@@ -36,7 +36,7 @@
             <span>New Record!</span>
             <div class="newRecord__text">0</div>
         </div>
-        <div class="load-button"><img src="https://media.istockphoto.com/vectors/vector-continue-pixel-glitch-vector-id936151464" alt=""></div>
+        <div class="load-button"><img src="images/retry.png" alt="retry"></div>
     </div>
 
     <main class="gamePage hidden">
@@ -54,21 +54,27 @@
         <div class="game-board">
             <nav class="monster-score">
                 <div class="monster-score__low">
-                    <span><img src="https://thumbnail9.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/7148/fa7e8c5c4470044f6b01e3d92c8cc7f1b9bc3be502d042644f0865d335f2.jpg" alt=""></span>
+                    <section class="countImage"></section>
                     <span>:</span>
                     <span class="monster-score__low__text">0</span>
                 </div>
                 <div class="monster-score__middle">
-                    <span><img src="http://img1.tmon.kr/cdn3/deals/2020/11/15/2424469838/front_56ec3_v4ep4.jpg" alt=""></span>
+                    <section class="countImage"></section>
                     <span>:</span>
                     <span class="monster-score__middle__text">0</span>
                 </div>
                 <div class="monster-score__high">
-                    <span><img src="http://gdimg.gmarket.co.kr/1624169489/still/600?ver=1560737857" alt=""></span>
+                    <section class="countImage"></section>
                     <span>:</span>
                     <span class="monster-score__high__text">0</span>
                 </div>
             </nav>
+            <div class="itemStatus">
+                <div class="itemStatus__text">Item Status : </div>
+                <div class="itemStatus__double-score"></div>
+                <div class="itemStatus__bonus-time"></div>
+                <div class="itemStatus__bonus-life"></div>
+            </div>
             <table class="game-table">
                 <tr>
                     <td><div class="game-table__spawnPoint"></div></td>
@@ -86,11 +92,6 @@
                     <td><div class="game-table__spawnPoint"></div></td>
                 </tr>
             </table>
-            <div class="itemStatus">
-                <div class="itemStatus__double-score"></div>
-                <div class="itemStatus__bonus-time"></div>
-                <div class="itemStatus__bonus-life"></div>
-            </div>
         </div>
 
         <footer class="game-info">

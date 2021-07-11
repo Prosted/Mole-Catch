@@ -30,7 +30,7 @@ const monsterLowText = monsterScore.querySelector(".monster-score__low__text");
 const monsterMiddleText = monsterScore.querySelector(".monster-score__middle__text");
 const monsterHighText = monsterScore.querySelector(".monster-score__high__text");
 
-const MAX_TIME = 30;
+const MAX_TIME = 5;
 const HOW_MANY_MONSTERS = 6;
 const SPAWN_PERCENTAGE = 100;
 const HOW_MANY_AREAS = 9;
@@ -148,7 +148,7 @@ function clickMonster(event){
         case 4:
             if(doubleScoreTrigger === false){
                 doubleScoreTrigger = true;
-                doubleScoreText.innerHTML = "Double Score";
+                doubleScoreText.innerHTML = "🎊 Double Score";
                 for(i=0; i<3; i++){
                     monstersInfo[i].score*=2;
                 }
@@ -166,7 +166,7 @@ function clickMonster(event){
             }
             break;
         case 5:
-            bonusTimeText.innerHTML = "Bonus Time +30";
+            bonusTimeText.innerHTML = "🎁 Bonus Time +10";
             setTimeout(()=>{
                 bonusTimeText.innerHTML = "";
             }, 1000);
@@ -175,7 +175,7 @@ function clickMonster(event){
             startTimer(currentTime);
             break;
         case 6: 
-            bonusLifeText.innerHTML = "Bonus Life +1";
+            bonusLifeText.innerHTML = "❤ Bonus Life +1";
             setTimeout(()=>{
                 bonusLifeText.innerHTML = "";
             }, 1000);
