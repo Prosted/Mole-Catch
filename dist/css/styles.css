@@ -1,11 +1,11 @@
 @import url("../css/reset.css");
 @import url("../css/fonts.css");
-.startPage, .gamePage, .gamePage .game-board, .gamePage .game-board .monster-score, .gamePage .game-board .monster-score div, .gamePage .game-board .itemStatus, .gamePage .game-board .game-table td .game-table__spawnPoint, .gamePage .game-info, .endPage {
+.startPage, .gamePage, .gamePage .game-board, .gamePage .game-board .monster-score, .gamePage .game-board .monster-score div, .gamePage .game-board .itemStatus, .gamePage .game-board .game-table .game-table__spawnPoint, .gamePage .game-info, .endPage {
   width: 100%;
   height: 100%;
 }
 
-body, .startPage, .startPage .banner, .startPage .startPage__box, .gamePage .score-board, .gamePage .game-board, .gamePage .game-board .monster-score, .gamePage .game-board .monster-score div, .gamePage .game-board .itemStatus, .gamePage .game-info .game-info__life, .endPage .score-board .score-board__max,
+body, .startPage, .startPage .banner, .startPage .startPage__box, .gamePage .score-board, .gamePage .game-board, .gamePage .game-board .monster-score, .gamePage .game-board .monster-score div, .gamePage .game-board .itemStatus, .gamePage .game-board .game-table .game-table__spawnPoint, .gamePage .game-info .game-info__life, .endPage .score-board .score-board__max,
 .endPage .score-board .score-board__current {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,7 +157,7 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 50%;
-  margin-top: 5%;
+  margin-top: 1%;
   padding: 20px 0;
   border: 3px solid teal;
   border-radius: 5px;
@@ -198,6 +198,9 @@ body {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: powderblue;
 }
 
 .gamePage .game-board .monster-score div {
@@ -237,6 +240,9 @@ body {
           justify-content: start;
   font-size: 1.3rem;
   font-weight: 600;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: powderblue;
 }
 
 .gamePage .game-board .itemStatus .itemStatus__text {
@@ -249,24 +255,23 @@ body {
   height: 100%;
   grid-column: 1/-1;
   grid-row: 2/-1;
-  border-collapse: collapse;
   text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
 }
 
-.gamePage .game-board .game-table td {
+.gamePage .game-board .game-table .game-table__spawnPoint {
+  text-align: center;
   border: 1px solid black;
-  width: 33.3%;
-  height: 33.3%;
 }
 
-.gamePage .game-board .game-table td .game-table__spawnPoint {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.gamePage .game-board .game-table td .game-table__spawnPoint img {
-  width: 25%;
-  height: 25%;
+.gamePage .game-board .game-table .game-table__spawnPoint img {
+  width: 30%;
+  height: 30%;
   cursor: pointer;
 }
 

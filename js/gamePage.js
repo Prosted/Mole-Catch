@@ -21,7 +21,7 @@ const lifeText = life.querySelector(".game-info__life__text");
 const timeText = time.querySelector(".game-info__time__text");
 
 //game table
-const table = document.querySelector(".game-table");
+const table = gamePageBox.querySelector(".game-table");
 const areas = table.querySelectorAll(".game-table__spawnPoint"); 
 
 //monster score
@@ -30,7 +30,7 @@ const monsterLowText = monsterScore.querySelector(".monster-score__low__text");
 const monsterMiddleText = monsterScore.querySelector(".monster-score__middle__text");
 const monsterHighText = monsterScore.querySelector(".monster-score__high__text");
 
-const MAX_TIME = 5;
+const MAX_TIME = 1972;
 const HOW_MANY_MONSTERS = 6;
 const SPAWN_PERCENTAGE = 100;
 const HOW_MANY_AREAS = 9;
@@ -55,19 +55,19 @@ const monstersInfo=[
        score : 100,
        time : 3000,
        id : 1,
-       url : "https://thumbnail9.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/7148/fa7e8c5c4470044f6b01e3d92c8cc7f1b9bc3be502d042644f0865d335f2.jpg",
+       url : "https://cdn.pixabay.com/photo/2018/04/19/21/17/lion-3334357_960_720.jpg",
 }, 
 {
     score : 300,
     time : 2500,
     id : 2,
-    url : "http://img1.tmon.kr/cdn3/deals/2020/11/15/2424469838/front_56ec3_v4ep4.jpg",
+    url : "https://cdn.pixabay.com/photo/2018/01/10/23/53/rabbit-3075088_960_720.png",
 },
 {
     score : 500,
     time : 2000,
     id : 3,
-    url : "http://gdimg.gmarket.co.kr/1624169489/still/600?ver=1560737857",
+    url : "https://cdn.pixabay.com/photo/2018/02/26/11/13/cat-3182830_960_720.png",
 },
 {
     score : 10000,
@@ -105,7 +105,7 @@ function saveUserScore(){
 
 function minusLife(event){
     const click = event.path.length;
-    if(click === 11){
+    if(click === 8){
         HOW_MANY_LIFES--;
         if(HOW_MANY_LIFES===0){
             gameOver();

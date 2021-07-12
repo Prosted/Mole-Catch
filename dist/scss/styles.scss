@@ -87,7 +87,7 @@ body{
         @extend %flex-shared;
         flex-direction: row;
         width: 50%;
-        margin-top: 5%;
+        margin-top: 1%;
         padding: 20px 0;
         border: 3px solid teal;
         border-radius: 5px;
@@ -118,6 +118,9 @@ body{
             display: grid;
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: 1fr;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: powderblue;
             div{
                 @extend %full-screen;
                 @extend %flex-shared;
@@ -153,6 +156,9 @@ body{
             justify-content: start;
             font-size: 1.3rem;
             font-weight: 600;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: powderblue;
             .itemStatus__text{
                 margin-left: 20px;
                 margin-right: 10px;
@@ -163,26 +169,22 @@ body{
             height: 100%;
             grid-column : 1/-1;
             grid-row:2/-1;
-            border-collapse: collapse;
             text-align: center;
-            td{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            .game-table__spawnPoint{
+                @extend %full-screen;
+                @extend %flex-shared;
+                text-align: center;
                 border: 1px solid black;
-                width:33.3%;
-                height: 33.3%;
-                .game-table__spawnPoint{
-                    @extend %full-screen;
-                    text-align: center;
-                    margin:0 auto;  
-                    img{
-                        width: 25%;
-                        height: 25%;
-                        cursor: pointer;
-                    }
+                img{
+                    width: 30%;
+                    height: 30%;
+                    cursor: pointer;
                 }
             }
-        }
-        
-        
+        }   
     }
     .game-info{
         @extend %full-screen;
